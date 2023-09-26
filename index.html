@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scan</title>
+    <script src="https://unpkg.com/html5-qrcode"></script>
+    <link rel="stylesheet" href="css/style.css">
+    
+
+</head>
+
+<body>
+    <p ><img src="asset/_HKMOA-logo_.png" alt=""></p>
+    
+    
+    <!-- 相机、文件方式同时只能使用一个,可根据自己需求修改,如:1.改成下拉框;2.改成tab;3.改成radio等等控制显示隐藏和相应逻辑 -->
+    <button onclick="useCamera()">使用相机扫一扫方式</button>
+    <button onclick="useLocal()">
+        <input type="file" id="upload-input" accept="image/*" value="使用文件方式">
+        <span id="upload-text">使用文件方式</span>
+    </button>
+    <div id="reader"></div>
+    <h3 id="qr-reader-results"></h3>
+
+    <div class="divSquare">1</div>
+    <div class="divSquare">2</div>
+    <div style='clear:both'></div>
+    <div class="divSquare">3</div>
+    <div class="divSquare">4</div>
+
+<script src='js/script.js'></script>
+
+</body>
+
+
+</html>
