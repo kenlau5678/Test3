@@ -125,20 +125,19 @@
                 onScanFailure
             );
         }
-
+        var content = document.querySelectorAll(".content")
+        var first = document.querySelector(".first")
         //扫码解析成功后按照自己的需求做后续的操作
         function onScanSuccess(decodedText, decodedResult) {
             reader.style.display = "none";
             res.innerText = "扫码成功结果:\n" + decodedText;
-            var flag = "";
             var div = document.querySelectorAll(".divSquare")
             if(decodedText== "1号拼图")
             {
                 div[0].className = "divSquare red"
-                window.localStorage.setItem('1', "true")
-                flag = "1"
-                window.location.href= flag+ ".html";
-                flag = "";
+                
+                content[0].style.display = "block"
+                first.style.display = "none"
                 return 0;
                
             }
